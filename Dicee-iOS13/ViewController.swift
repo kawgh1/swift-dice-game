@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
+    @IBOutlet weak var rollButton: UIButton!
     
     let diceArray = [
         #imageLiteral(resourceName: "DiceOne"),
@@ -24,15 +25,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        rollButton.isEnabled = true
       
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         diceImageView1.image = diceArray.randomElement()
         diceImageView2.image = diceArray.randomElement()
+        print("clicked")
         
     }
     
 }
+
 
